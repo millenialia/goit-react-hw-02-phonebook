@@ -18,23 +18,26 @@ export class ContactForm extends Component {
   render() {
     return (
       <form className="form" action="add contact" onSubmit={this.onFormSubmit}>
-
-        <input
+        <label htmlFor="name" className='label'>
+          Name
+          <input
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-
-        <input
+        </label>
+        <label htmlFor="number" className='label'>
+          Number
+          <input
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-
+        </label>
         <button type="submit" className="btn">Add contact</button>
     </form>
   )
