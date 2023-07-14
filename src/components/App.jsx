@@ -56,7 +56,7 @@ export class App extends Component  {
     const filteredContacts = this.filterContacts(contacts)
 
     return (
-      <div>
+      <div className='phonebookBlock'>
         <h1>Phonebook</h1>
         <ContactForm
           addContact = {this.addContact} />

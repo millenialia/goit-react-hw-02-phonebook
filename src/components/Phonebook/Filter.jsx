@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export const Filter = ({filter, handleChange}) => {
     return (
-        <label htmlFor="filter">
+        <label htmlFor="filter" className="filter">
           Find contacts by name
         <input
           type="text"

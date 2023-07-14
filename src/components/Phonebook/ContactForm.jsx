@@ -17,7 +17,7 @@ export class ContactForm extends Component {
 
   render() {
     return (
-      <form action="add contact" onSubmit={this.onFormSubmit}>
+      <form className="form" action="add contact" onSubmit={this.onFormSubmit}>
 
         <input
           type="text"
@@ -35,7 +35,7 @@ export class ContactForm extends Component {
           required
         />
 
-        <button type="submit">Add contact</button>
+        <button type="submit" className="btn">Add contact</button>
     </form>
   )
   }
