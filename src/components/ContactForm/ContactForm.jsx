@@ -2,6 +2,8 @@ import { Component } from 'react'
 import { nanoid } from 'nanoid'
 import PropTypes from "prop-types";
 
+import css  from "./ContactForm.module.css";
+
 export class ContactForm extends Component {
 
   addContact = this.props.addContact;
@@ -17,8 +19,8 @@ export class ContactForm extends Component {
 
   render() {
     return (
-      <form className="form" action="add contact" onSubmit={this.onFormSubmit}>
-        <label htmlFor="name" className='label'>
+      <form className= {css.form} action="add contact" onSubmit={this.onFormSubmit}>
+        <label htmlFor="name" className={css.label}>
           Name
           <input
           type="text"
@@ -28,7 +30,7 @@ export class ContactForm extends Component {
           required
         />
         </label>
-        <label htmlFor="number" className='label'>
+        <label htmlFor="number" className={css.label}>
           Number
           <input
           type="tel"
@@ -38,7 +40,7 @@ export class ContactForm extends Component {
           required
         />
         </label>
-        <button type="submit" className="btn">Add contact</button>
+        <button type="submit" className= {css.btn}>Add contact</button>
     </form>
   )
   }

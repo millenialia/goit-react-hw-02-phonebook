@@ -1,8 +1,8 @@
 import { Component } from 'react'
 
-import { ContactForm } from 'components/Phonebook/ContactForm'
-import { ContactList } from "components/Phonebook/ContactList";
-import { Filter } from "components/Phonebook/Filter";
+import { ContactForm } from 'components/ContactForm/ContactForm'
+import { ContactList } from "components/ContactList/ContactList";
+import { Filter } from "components/Filter/Filter";
 
 export class App extends Component  {
 

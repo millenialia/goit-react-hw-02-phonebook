@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import css  from "./Filter.module.css";
 
 export const Filter = ({filter, handleChange}) => {
     return (
-        <label htmlFor="filter" className="filter">
+        <label htmlFor="filter" className= {css.filter}>
           Find contacts by name
         <input
           type="text"
