@@ -19,9 +19,9 @@ export class App extends Component  {
   addContact = (contactName, contactNumber, contactId) => {
     if (this.checkName(contactName)) {
       this.state.contacts.push({ contactName, contactNumber,contactId });
-    this.setState({
-      contacts: this.state.contacts,
-    })
+    this.setState((prevState) =>({
+      contacts: prevState.contacts,
+    }))
     }
   }
 
@@ -45,10 +45,11 @@ export class App extends Component  {
   }
 
   deleteContact = ({ target }) => {
-    const newContactList = this.state.contacts.filter((contact) => contact.contactId !== target.id)
-    this.setState({
-      contacts: newContactList
-    })
+    this.setState((prevState) => ({
+
+        contacts: prevState.contacts.filter((contact) => contact.contactId !== target.id)
+
+    }))
   }
 
   render() {

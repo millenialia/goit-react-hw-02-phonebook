@@ -18,5 +18,5 @@ export const Filter = ({filter, handleChange}) => {
 
 Filter.propTypes = {
   filter: PropTypes.string.isRequired,
-  deleteCohandleChangentact: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired
 }

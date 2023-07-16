@@ -13,8 +13,8 @@ export class ContactForm extends Component {
     const contactName = event.currentTarget.elements.name.value
     const contactNumber = event.currentTarget.elements.number.value
     const contactId = nanoid()
-
     this.addContact(contactName, contactNumber, contactId)
+    event.currentTarget.reset()
   }
 
   render() {
